@@ -41,11 +41,39 @@ public class LeetCode3 {
     }
 
     /**
+     * 使用滑动窗口来解决
+     * 总体思路
+     * 1  声明一个set来存储，字符串，
+     * 2  声明一个left, 控制左指针，如果set有重复的数据，就移除这个数据，左指针移动下
+     * 2 声明一个right，找到最大字符串
+     * @param s
+     * @return
+     */
+    public int lengthOfLong2(String s) {
+        Set<Character> maxCharacterSet = new HashSet<>();
+
+        int left = 0,maxLength = 0;
+        // 遍历字符串,声明右指针
+        for (int right = 0; right < s.length() ; right++) {
+               // 移动左指针
+            while (maxCharacterSet.contains(s.charAt(right))) {
+                maxCharacterSet.remove(s.charAt(left));
+                left++;
+            }
+            maxCharacterSet.add(s.charAt(right));
+            maxLength = Math.max(maxLength, right - left + 1);
+        }
+        return maxLength;
+    }
+
+    /**
      * 测试这个主类
      * @param args
      */
     public static void main(String[] args) {
         String s = "abbbcaa";
         System.out.println(new LeetCode3().lengthOfLongestSubstring(s));
+
+        System.out.println(new LeetCode3().lengthOfLong2(s));
     }
 }
