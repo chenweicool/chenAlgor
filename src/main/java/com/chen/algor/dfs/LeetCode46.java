@@ -9,9 +9,7 @@ import java.util.List;
  */
 public class LeetCode46 {
     /**
-     * 回硕算法
-     * @param num
-     * @return
+     * 回溯算法，也就是递归调用
      */
     public List<List<Integer>> permute(int[] num) {
            // 声明一个数组，然后进行计算
