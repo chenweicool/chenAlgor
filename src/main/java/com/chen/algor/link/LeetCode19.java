@@ -15,7 +15,7 @@ public class LeetCode19 {
      * @return
      */
     public ListNode removeNode(ListNode head, int n) {
-          // 声明一个亚节点
+          // 声明一个哑节点
         ListNode dump = new ListNode(0,head);
         // 得到链表的长度
         int length = getNodeLength(head);
@@ -58,7 +58,7 @@ public class LeetCode19 {
         for (int i = 0; i <= n ; i++) {
             first = first.next;
         }
-        // 以first为准，对seconde进行异步,此时的seconde就是要删除节点
+        // 以first为准，对seconde进行移步,此时的seconde就是要删除节点
         while (first != null) {
             first = first.next;
             seconde = seconde.next;

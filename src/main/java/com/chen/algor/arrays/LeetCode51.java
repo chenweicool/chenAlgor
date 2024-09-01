@@ -45,6 +45,7 @@ public class LeetCode51 {
 
     private boolean isValied(int[] queens, int row, int col) {
         for (int i = 0; i < row; i++) {
+            // 检查列冲突，对角线冲突，
             if (queens[i] == col || Math.abs(queens[i] - col) == Math.abs(i - row)) {
                  return false;
             }
