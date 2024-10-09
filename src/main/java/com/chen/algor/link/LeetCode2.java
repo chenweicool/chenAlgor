@@ -7,6 +7,7 @@ import com.chen.algor.common.ListNode;
  * 这个题是链表，
  * 主要考察链表的使用，
  * 每道题需要达到标准是就是融会贯通，
+ *
  */
 public class LeetCode2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

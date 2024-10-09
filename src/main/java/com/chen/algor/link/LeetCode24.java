@@ -17,18 +17,17 @@ public class LeetCode24 {
         ListNode dump = new ListNode(0);
         dump.next = head;
         ListNode pre = dump;
-        while (head != null && head.next != null) {
-            ListNode firstNode = head;
-            ListNode secondNode = head.next;
+        while (pre.next != null && pre.next.next!= null) {
+            ListNode firstNode = pre.next;
+            ListNode secondNode = pre.next.next;
 
             // 进行交换
-            pre.next = secondNode;
             firstNode.next = secondNode.next;
             secondNode.next = firstNode;
+            pre.next = secondNode;
 
             //移动指针
            pre = firstNode;
-           head = firstNode.next;
         }
         return dump.next;
     }
