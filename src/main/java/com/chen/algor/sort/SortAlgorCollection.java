@@ -8,6 +8,7 @@ public class SortAlgorCollection {
      *  * 冒泡排序
      *  * 优点：实现简单，比较直观
      *  * 缺点时间复杂度比较高,如果数组是有序的，那么复杂度并不会降低
+     *  是稳定排序算法
      * @param array
      */
     public static void bubbleSort(int[] array) {

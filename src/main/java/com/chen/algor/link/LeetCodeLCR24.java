@@ -9,15 +9,17 @@ import com.chen.algor.common.ListNode;
 public class LeetCodeLCR24 {
 
     public ListNode reverseListNode(ListNode head) {
-          ListNode prev = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode nextTemp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = nextTemp;
+        ListNode prev = null; // 前驱节点
+        ListNode current = head; // 当前节点
+
+        while (current != null) {
+            ListNode next = current.next; // 暂存下一个节点
+            current.next = prev; // 反转当前节点的指向
+            prev = current; // 移动 prev 到当前节点
+            current = next; // 移动 current 到下一个节点
         }
-        return prev;
+
+        return prev; // prev 成为新链表的头节点
     }
 
     public static void main(String[] args) {

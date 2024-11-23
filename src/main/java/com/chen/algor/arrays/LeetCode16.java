@@ -3,8 +3,8 @@ package com.chen.algor.arrays;
 import java.util.Arrays;
 
 /**
- * 三数之和，找到最相近的数字
- * 解题思路: 双指针
+ 给你一个长度为 n 的整数数组 nums 和 一个目标值 target。请你从 nums 中选出三个整数，使它们的和与 target 最接近。
+ 复习的次数+1
  */
 public class LeetCode16 {
     public Integer threeSumClose(int[] nums, int target){
