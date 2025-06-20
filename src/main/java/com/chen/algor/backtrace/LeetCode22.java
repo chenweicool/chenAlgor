@@ -21,6 +21,7 @@ public class LeetCode22 {
         // 字符串长度等于n的2倍就结束
         if (current.length() == max * 2) {
             result.add(current);
+            // 撤销操作
             return;
         }
         // 尝试加一个左括号
@@ -34,7 +35,7 @@ public class LeetCode22 {
     }
 
     public static void main(String[] args) {
-        List<String> generate = new LeetCode22().generate(3);
+        List<String> generate = new LeetCode22().generate(2);
         for (String s : generate) {
             System.out.println(s);
         }

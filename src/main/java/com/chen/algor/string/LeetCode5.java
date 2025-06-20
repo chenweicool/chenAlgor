@@ -30,7 +30,17 @@ public class LeetCode5 {
         if(len < 2){
             return s;
         }
-        // 进行第一层的遍历
+        // 进行第一层的遍历，外层循环表示子字串，内层循环，表示字子串的起点，通过i计算终点： j = i+len-1
+        /**
+         *  我们不希望 j 越界（j < n），所以：
+         *
+         *         j = i + len - 1 < n
+         *
+         *         变形得：i < n - len + 1
+         *
+         *         简化后就是：i <= n - len
+         */
+
         for (int L = 2; L <= len; L++) {
               // 声明左边界
             for (int i = 0; i < len; i++) {
