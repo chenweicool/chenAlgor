@@ -37,7 +37,7 @@ public class LeetCode113 {
             dfs(root.right, targetSum - root.val, result, currentPath);
         }
 
-        // 溢出当前节点
+        // 移除出当前节点
         currentPath.remove(currentPath.size() - 1);
     }
 
